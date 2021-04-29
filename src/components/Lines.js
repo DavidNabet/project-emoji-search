@@ -1,12 +1,14 @@
+import copy from "copy-to-clipboard";
+
 const Lines = ({ emojis }) => {
-  console.log(emojis);
+  // console.log(emojis);
   return (
     <>
-      {emojis.map((emoji, i) => {
+      {emojis.map(({ symbol, title }, i) => {
         return (
-          <div className="line" key={i}>
+          <div className="line" key={i} onClick={() => copy(symbol)}>
             <span>
-              {emoji.symbol} {emoji.title}
+              {symbol} {title}
             </span>
           </div>
         );

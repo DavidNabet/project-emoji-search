@@ -38,7 +38,7 @@ form {
   width: calc(100% / 2.5);
 }
 
-input[type="search"],
+input,
 .line {
   width: 100%;
   font-size: 1em;
@@ -50,7 +50,7 @@ input[type="search"],
   background-color: var(--color-search);
 }
 
-input[type="search"]::placeholder {
+input::placeholder {
   padding-left: 20px;
 }
 
@@ -63,6 +63,11 @@ input[type="search"]::placeholder {
 
 .line:hover {
   background-color: var(--color-search);
+}
+
+.line:hover:after {
+  content: "Click to copy";
+  float: right;
 }
 
 .line span {
