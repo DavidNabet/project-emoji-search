@@ -3,9 +3,10 @@ import emojiList from "../emoji_list.json";
 const filterEmoji = (searchText, maxResults) => {
   return emojiList
     .filter((emoji) => {
-      if (emoji.title.toLowerCase().includes(searchText.toLowerCase())) {
-        return true;
-      } else if (emoji.keywords.includes(searchText)) {
+      if (
+        emoji.title.toLowerCase().startsWith(searchText.toLowerCase()) ||
+        emoji.keywords.startsWith(searchText)
+      ) {
         return true;
       }
       return false;

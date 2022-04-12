@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   const [filter, setFilter] = useState(filterEmoji("", 20));
-
+  // On pouvait utiliser une regex et si ça match on map nos résultas dans un composant enfant
   const handleSearch = (event) => {
     event.preventDefault();
     // let val = setSearch(setFilter(e.target.value, 20));
